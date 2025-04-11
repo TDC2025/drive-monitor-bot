@@ -1,0 +1,15 @@
+name: Ejecutar revisión de Drive diaria
+
+on:
+  schedule:
+    - cron: "0 8 * * *"  # Hora UTC → 2:00 AM Ciudad de México
+  workflow_dispatch:  # También permite ejecutarlo manualmente
+
+jobs:
+  ejecutar-colab:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ejecutar notebook desde GitHub
+        uses: luisflorez/colab-cli-action@v1
+        with:
+          notebook_path: "revisar_drive.ipynb"
