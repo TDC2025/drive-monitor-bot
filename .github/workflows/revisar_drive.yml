@@ -12,4 +12,4 @@ jobs:
       - name: Ejecutar notebook desde GitHub
         uses: luisflorez/colab-cli-action@v1
         with:
-          notebook_path: "revisar_drive.ipynb"
+          notebook_path: "Monitoreo_drive.ipynb"
